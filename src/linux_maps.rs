@@ -138,3 +138,54 @@ fn test_parse_maps() {
     assert_eq!(super::maps_contain_addr(0x00400000, &vec), true);
     assert_eq!(super::maps_contain_addr(0x00300000, &vec), false);
 }
+
+#[test]
+fn test_parse_maps_qemu() {
+    let contents = include_str!("../ci/testdata/map-qemu.txt");
+    let vec = parse_proc_maps(contents);
+    let expected = vec![
+        MapRange {
+            range_start: 0x00400000,
+            range_end: 0x00507000,
+            offset: 0,
+            dev: "00:14".to_string(),
+            flags: "r-xp".to_string(),
+            inode: 205736,
+            pathname: Some("/usr/bin/fish".to_string()),
+        },
+        MapRange {
+            range_start: 0x00708000,
+            range_end: 0x0070a000,
+            offset: 0,
+            dev: "00:00".to_string(),
+            flags: "rw-p".to_string(),
+            inode: 0,
+            pathname: None,
+        },
+        MapRange {
+            range_start: 0x0178c000,
+            range_end: 0x01849000,
+            offset: 0,
+            dev: "00:00".to_string(),
+            flags: "rw-p".to_string(),
+            inode: 0,
+            pathname: Some("[heap]".to_string()),
+        },
+        MapRange {
+            range_start: 0x7f438053b000,
+            range_end: 0x7f438053f000,
+            offset: 0,
+            dev: "fd:01".to_string(),
+            flags: "r--p".to_string(),
+            inode: 59034409,
+            pathname: Some(
+                "/usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.4200.6 (deleted)".to_string(),
+            ),
+        },
+    ];
+    assert_eq!(vec, expected);
+
+    // Also check that maps_contain_addr works as expected
+    assert_eq!(super::maps_contain_addr(0x00400000, &vec), true);
+    assert_eq!(super::maps_contain_addr(0x00300000, &vec), false);
+}

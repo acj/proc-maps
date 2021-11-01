@@ -1,0 +1,276 @@
+60000000-60001000 r--p 00000000 fd:01 22651991                           /usr/bin/qemu-arm-static
+60001000-602df000 r-xp 00001000 fd:01 22651991                           /usr/bin/qemu-arm-static
+602df000-6052b000 r--p 002df000 fd:01 22651991                           /usr/bin/qemu-arm-static
+6052b000-605b1000 r--p 0052a000 fd:01 22651991                           /usr/bin/qemu-arm-static
+605b1000-605be000 rw-p 005b0000 fd:01 22651991                           /usr/bin/qemu-arm-static
+605be000-605c7000 rw-p 00000000 00:00 0 
+605c7000-625c5000 rwxp 00000000 00:00 0 
+625c5000-625c6000 ---p 00000000 00:00 0 
+625c6000-625e2000 rw-p 00000000 00:00 0 
+63d2b000-69000000 rw-p 00000000 00:00 0                                  [heap]
+7fecc8000000-7fecc8da3000 rw-p 00000000 00:00 0 
+7fecc8da3000-7feccc000000 ---p 00000000 00:00 0 
+7feccc000000-7feccc021000 rw-p 00000000 00:00 0 
+7feccc021000-7fecd0000000 ---p 00000000 00:00 0 
+7fecd0000000-7fecd1a97000 rw-p 00000000 00:00 0 
+7fecd1a97000-7fecd4000000 ---p 00000000 00:00 0 
+7fecd4000000-7fecd4c5a000 rw-p 00000000 00:00 0 
+7fecd4c5a000-7fecd8000000 ---p 00000000 00:00 0 
+7fecd8000000-7fecd9a93000 rw-p 00000000 00:00 0 
+7fecd9a93000-7fecdc000000 ---p 00000000 00:00 0 
+7fecdc000000-7fecddc8c000 rw-p 00000000 00:00 0 
+7fecddc8c000-7fece0000000 ---p 00000000 00:00 0 
+7fece0000000-7fece1ab3000 rw-p 00000000 00:00 0 
+7fece1ab3000-7fece4000000 ---p 00000000 00:00 0 
+7fece4000000-7fece5a96000 rw-p 00000000 00:00 0 
+7fece5a96000-7fece5b41000 rw-p 00000000 00:00 0 
+7fece5b41000-7fece8000000 ---p 00000000 00:00 0 
+7fece8000000-7fece9be0000 rw-p 00000000 00:00 0 
+7fece9be0000-7fecec000000 ---p 00000000 00:00 0 
+7fecec000000-7feceda96000 rw-p 00000000 00:00 0 
+7feceda96000-7fecf0000000 ---p 00000000 00:00 0 
+7fecf0000000-7fecf1ab1000 rw-p 00000000 00:00 0 
+7fecf1ab1000-7fecf4000000 ---p 00000000 00:00 0 
+7fecf400f000-7fedef70f000 ---p 00000000 00:00 0 
+7fedef70f000-7fedef80f000 rw-p 00000000 00:00 0 
+7fedef80f000-7fedef880000 rw-p 00000000 00:00 0 
+7fedef880000-7fedefa0d000 ---p 00000000 00:00 0 
+7fedefa0d000-7fedefa0e000 ---p 00000000 00:00 0 
+7fedefa0e000-7fedefb0f000 rw-p 00000000 00:00 0 
+7fedefb0f000-7fedefb77000 rw-p 00000000 00:00 0 
+7fedefb77000-7fedefd0d000 ---p 00000000 00:00 0 
+7fedefd0d000-7fedefd0e000 ---p 00000000 00:00 0 
+7fedefd0e000-7fedefe0f000 rw-p 00000000 00:00 0 
+7fedefe0f000-7fedefecf000 rw-p 00000000 00:00 0 
+7fedefecf000-7fedf000d000 ---p 00000000 00:00 0 
+7fedf000d000-7fedf000e000 ---p 00000000 00:00 0 
+7fedf000e000-7fedf010f000 rw-p 00000000 00:00 0 
+7fedf010f000-7fedf01c8000 rw-p 00000000 00:00 0 
+7fedf01c8000-7fedf030d000 ---p 00000000 00:00 0 
+7fedf030d000-7fedf030e000 ---p 00000000 00:00 0 
+7fedf030e000-7fedf040f000 rw-p 00000000 00:00 0 
+7fedf040f000-7fedf04c9000 rw-p 00000000 00:00 0 
+7fedf04c9000-7fedf060d000 ---p 00000000 00:00 0 
+7fedf060d000-7fedf060e000 ---p 00000000 00:00 0 
+7fedf060e000-7fedf070f000 rw-p 00000000 00:00 0 
+7fedf070f000-7fedf07b7000 rw-p 00000000 00:00 0 
+7fedf07b7000-7fedf090d000 ---p 00000000 00:00 0 
+7fedf090d000-7fedf090e000 ---p 00000000 00:00 0 
+7fedf090e000-7fedf0a0f000 rw-p 00000000 00:00 0 
+7fedf0a0f000-7fedf0ac7000 rw-p 00000000 00:00 0 
+7fedf0ac7000-7fedf0c0d000 ---p 00000000 00:00 0 
+7fedf0c0d000-7fedf0c0e000 ---p 00000000 00:00 0 
+7fedf0c0e000-7fedf0d0f000 rw-p 00000000 00:00 0 
+7fedf0d0f000-7fedf0dc8000 rw-p 00000000 00:00 0 
+7fedf0dc8000-7fedf0f0d000 ---p 00000000 00:00 0 
+7fedf0f0d000-7fedf0f0e000 ---p 00000000 00:00 0 
+7fedf0f0e000-7fedf100f000 rw-p 00000000 00:00 0 
+7fedf100f000-7fedf10c4000 rw-p 00000000 00:00 0 
+7fedf10c4000-7fedf118e000 ---p 00000000 00:00 0 
+7fedf118e000-7fedf118f000 ---p 00000000 00:00 0 
+7fedf118f000-7fedf130f000 rw-p 00000000 00:00 0 
+7fedf130f000-7fedf13d1000 rw-p 00000000 00:00 0 
+7fedf13d1000-7fedf1492000 ---p 00000000 00:00 0 
+7fedf1492000-7fedf1493000 ---p 00000000 00:00 0 
+7fedf1493000-7fedf1c94000 rw-p 00000000 00:00 0 
+7fedf1c94000-7fedf1c98000 r-xp 00000000 00:37 687160                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/generator.so
+7fedf1c98000-7fedf1ca8000 ---p 00004000 00:37 687160                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/generator.so
+7fedf1ca8000-7fedf1ca9000 r--p 00004000 00:37 687160                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/generator.so
+7fedf1ca9000-7fedf1caa000 rw-p 00005000 00:37 687160                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/generator.so
+7fedf1caa000-7fedf1cae000 r-xp 00000000 00:37 687161                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/parser.so
+7fedf1cae000-7fedf1cbd000 ---p 00004000 00:37 687161                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/parser.so
+7fedf1cbd000-7fedf1cbe000 r--p 00003000 00:37 687161                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/parser.so
+7fedf1cbe000-7fedf1cbf000 rw-p 00004000 00:37 687161                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/json/ext/parser.so
+7fedf1cbf000-7fedf1dbf000 rw-p 00000000 00:00 0 
+7fedf1dbf000-7fedf1dc1000 r-xp 00000000 00:37 687151                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/windows_31j.so
+7fedf1dc1000-7fedf1dd0000 ---p 00002000 00:37 687151                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/windows_31j.so
+7fedf1dd0000-7fedf1dd1000 r--p 00001000 00:37 687151                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/windows_31j.so
+7fedf1dd1000-7fedf1dd2000 rw-p 00002000 00:37 687151                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/windows_31j.so
+7fedf1dd2000-7fedf1de5000 r-xp 00000000 00:37 33367                      /lib/arm-linux-gnueabihf/libz.so.1.2.11
+7fedf1de5000-7fedf1df4000 ---p 00013000 00:37 33367                      /lib/arm-linux-gnueabihf/libz.so.1.2.11
+7fedf1df4000-7fedf1df5000 r--p 00012000 00:37 33367                      /lib/arm-linux-gnueabihf/libz.so.1.2.11
+7fedf1df5000-7fedf1df6000 rw-p 00013000 00:37 33367                      /lib/arm-linux-gnueabihf/libz.so.1.2.11
+7fedf1df6000-7fedf1dfb000 ---p 00000000 00:00 0 
+7fedf1dfb000-7fedf1e03000 r-xp 00000000 00:37 687178                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/zlib.so
+7fedf1e03000-7fedf1e13000 ---p 00008000 00:37 687178                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/zlib.so
+7fedf1e13000-7fedf1e14000 r--p 00008000 00:37 687178                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/zlib.so
+7fedf1e14000-7fedf1e15000 rw-p 00009000 00:37 687178                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/zlib.so
+7fedf1e15000-7fedf1e16000 r-xp 00000000 00:37 687090                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/sha1.so
+7fedf1e16000-7fedf1e25000 ---p 00001000 00:37 687090                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/sha1.so
+7fedf1e25000-7fedf1e26000 r--p 00000000 00:37 687090                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/sha1.so
+7fedf1e26000-7fedf1e27000 rw-p 00001000 00:37 687090                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/sha1.so
+7fedf1e27000-7fedf2027000 rw-p 00000000 00:00 0 
+7fedf2027000-7fedf2028000 r-xp 00000000 00:37 687153                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/fcntl.so
+7fedf2028000-7fedf2037000 ---p 00001000 00:37 687153                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/fcntl.so
+7fedf2037000-7fedf2038000 r--p 00000000 00:37 687153                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/fcntl.so
+7fedf2038000-7fedf2039000 rw-p 00001000 00:37 687153                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/fcntl.so
+7fedf2039000-7fedf2239000 rw-p 00000000 00:00 0 
+7fedf2239000-7fedf2259000 r-xp 00000000 00:37 687085                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/date_core.so
+7fedf2259000-7fedf2268000 ---p 00020000 00:37 687085                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/date_core.so
+7fedf2268000-7fedf2269000 r--p 0001f000 00:37 687085                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/date_core.so
+7fedf2269000-7fedf226a000 rw-p 00020000 00:37 687085                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/date_core.so
+7fedf226a000-7fedf226d000 r-xp 00000000 00:37 687157                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/console.so
+7fedf226d000-7fedf227c000 ---p 00003000 00:37 687157                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/console.so
+7fedf227c000-7fedf227d000 r--p 00002000 00:37 687157                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/console.so
+7fedf227d000-7fedf227e000 rw-p 00003000 00:37 687157                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/console.so
+7fedf227e000-7fedf227f000 r-xp 00000000 00:37 687158                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/nonblock.so
+7fedf227f000-7fedf228e000 ---p 00001000 00:37 687158                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/nonblock.so
+7fedf228e000-7fedf228f000 r--p 00000000 00:37 687158                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/nonblock.so
+7fedf228f000-7fedf2290000 rw-p 00001000 00:37 687158                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/nonblock.so
+7fedf2290000-7fedf22c6000 r-xp 00000000 00:37 687164                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/openssl.so
+7fedf22c6000-7fedf22d6000 ---p 00036000 00:37 687164                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/openssl.so
+7fedf22d6000-7fedf22d8000 r--p 00036000 00:37 687164                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/openssl.so
+7fedf22d8000-7fedf22d9000 rw-p 00038000 00:37 687164                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/openssl.so
+7fedf22d9000-7fedf22db000 r-xp 00000000 00:37 687092                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest.so
+7fedf22db000-7fedf22ea000 ---p 00002000 00:37 687092                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest.so
+7fedf22ea000-7fedf22eb000 r--p 00001000 00:37 687092                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest.so
+7fedf22eb000-7fedf22ec000 rw-p 00002000 00:37 687092                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest.so
+7fedf22ec000-7fedf2475000 r-xp 00000000 00:37 199781                     /usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1
+7fedf2475000-7fedf2484000 ---p 00189000 00:37 199781                     /usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1
+7fedf2484000-7fedf249d000 r--p 00188000 00:37 199781                     /usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1
+7fedf249d000-7fedf249e000 rw-p 001a1000 00:37 199781                     /usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1
+7fedf249e000-7fedf24a2000 rw-p 00000000 00:00 0 
+7fedf24a2000-7fedf24ed000 r-xp 00000000 00:37 199915                     /usr/lib/arm-linux-gnueabihf/libssl.so.1.1
+7fedf24ed000-7fedf24fc000 ---p 0004b000 00:37 199915                     /usr/lib/arm-linux-gnueabihf/libssl.so.1.1
+7fedf24fc000-7fedf2502000 r--p 0004a000 00:37 199915                     /usr/lib/arm-linux-gnueabihf/libssl.so.1.1
+7fedf2502000-7fedf2505000 rw-p 00050000 00:37 199915                     /usr/lib/arm-linux-gnueabihf/libssl.so.1.1
+7fedf2505000-7fedf250a000 ---p 00000000 00:00 0 
+7fedf250a000-7fedf250b000 r-xp 00000000 00:37 687088                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/md5.so
+7fedf250b000-7fedf251a000 ---p 00001000 00:37 687088                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/md5.so
+7fedf251a000-7fedf251b000 r--p 00000000 00:37 687088                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/md5.so
+7fedf251b000-7fedf251c000 rw-p 00001000 00:37 687088                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/digest/md5.so
+7fedf251c000-7fedf251d000 r-xp 00000000 00:37 687159                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/wait.so
+7fedf251d000-7fedf252c000 ---p 00001000 00:37 687159                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/wait.so
+7fedf252c000-7fedf252d000 r--p 00000000 00:37 687159                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/wait.so
+7fedf252d000-7fedf252e000 rw-p 00001000 00:37 687159                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/io/wait.so
+7fedf252e000-7fedf254a000 r-xp 00000000 00:37 687174                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/socket.so
+7fedf254a000-7fedf2559000 ---p 0001c000 00:37 687174                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/socket.so
+7fedf2559000-7fedf255a000 r--p 0001b000 00:37 687174                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/socket.so
+7fedf255a000-7fedf255b000 rw-p 0001c000 00:37 687174                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/socket.so
+7fedf255b000-7fedf298c000 rw-p 00000000 00:00 0 
+7fedf298c000-7fedf2990000 r-xp 00000000 00:37 687152                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/etc.so
+7fedf2990000-7fedf299f000 ---p 00004000 00:37 687152                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/etc.so
+7fedf299f000-7fedf29a0000 r--p 00003000 00:37 687152                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/etc.so
+7fedf29a0000-7fedf29a1000 rw-p 00004000 00:37 687152                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/etc.so
+7fedf29a1000-7fedf2ba1000 rw-p 00000000 00:00 0 
+7fedf2ba1000-7fedf2ba2000 r-xp 00000000 00:37 687141                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16be.so
+7fedf2ba2000-7fedf2bb1000 ---p 00001000 00:37 687141                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16be.so
+7fedf2bb1000-7fedf2bb2000 r--p 00000000 00:37 687141                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16be.so
+7fedf2bb2000-7fedf2bb3000 rw-p 00001000 00:37 687141                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16be.so
+7fedf2bb3000-7fedf2bb4000 r-xp 00000000 00:37 687142                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16le.so
+7fedf2bb4000-7fedf2bc3000 ---p 00001000 00:37 687142                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16le.so
+7fedf2bc3000-7fedf2bc4000 r--p 00000000 00:37 687142                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16le.so
+7fedf2bc4000-7fedf2bc5000 rw-p 00001000 00:37 687142                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/utf_16le.so
+7fedf2bc5000-7fedf2cc5000 rw-p 00000000 00:00 0 
+7fedf2cc5000-7fedf2cc8000 r-xp 00000000 00:37 687176                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/strscan.so
+7fedf2cc8000-7fedf2cd7000 ---p 00003000 00:37 687176                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/strscan.so
+7fedf2cd7000-7fedf2cd8000 r--p 00002000 00:37 687176                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/strscan.so
+7fedf2cd8000-7fedf2cd9000 rw-p 00003000 00:37 687176                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/strscan.so
+7fedf2cd9000-7fedf2ceb000 r-xp 00000000 00:37 687078                     /usr/lib/arm-linux-gnueabihf/libyaml-0.so.2.0.5
+7fedf2ceb000-7fedf2cfa000 ---p 00012000 00:37 687078                     /usr/lib/arm-linux-gnueabihf/libyaml-0.so.2.0.5
+7fedf2cfa000-7fedf2cfb000 r--p 00011000 00:37 687078                     /usr/lib/arm-linux-gnueabihf/libyaml-0.so.2.0.5
+7fedf2cfb000-7fedf2cfc000 rw-p 00012000 00:37 687078                     /usr/lib/arm-linux-gnueabihf/libyaml-0.so.2.0.5
+7fedf2cfc000-7fedf2d01000 ---p 00000000 00:00 0 
+7fedf2d01000-7fedf2d05000 r-xp 00000000 00:37 687166                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/psych.so
+7fedf2d05000-7fedf2d14000 ---p 00004000 00:37 687166                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/psych.so
+7fedf2d14000-7fedf2d15000 r--p 00003000 00:37 687166                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/psych.so
+7fedf2d15000-7fedf2d16000 rw-p 00004000 00:37 687166                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/psych.so
+7fedf2d16000-7fedf2e16000 rw-p 00000000 00:00 0 
+7fedf2e16000-7fedf2e47000 ---p 00000000 00:00 0 
+7fedf2e47000-7fedf2f47000 rw-p 00000000 00:00 0 
+7fedf2f47000-7fedf2f4b000 r-xp 00000000 00:37 687165                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/pathname.so
+7fedf2f4b000-7fedf2f5b000 ---p 00004000 00:37 687165                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/pathname.so
+7fedf2f5b000-7fedf2f5c000 r--p 00004000 00:37 687165                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/pathname.so
+7fedf2f5c000-7fedf2f5d000 rw-p 00005000 00:37 687165                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/pathname.so
+7fedf2f5d000-7fedf305d000 rw-p 00000000 00:00 0 
+7fedf305d000-7fedf3062000 r-xp 00000000 00:37 687175                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/stringio.so
+7fedf3062000-7fedf3071000 ---p 00005000 00:37 687175                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/stringio.so
+7fedf3071000-7fedf3072000 r--p 00004000 00:37 687175                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/stringio.so
+7fedf3072000-7fedf3073000 rw-p 00005000 00:37 687175                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/stringio.so
+7fedf3073000-7fedf3173000 rw-p 00000000 00:00 0 
+7fedf3173000-7fedf3175000 r-xp 00000000 00:37 687138                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/trans/transdb.so
+7fedf3175000-7fedf3184000 ---p 00002000 00:37 687138                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/trans/transdb.so
+7fedf3184000-7fedf3185000 r--p 00001000 00:37 687138                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/trans/transdb.so
+7fedf3185000-7fedf3186000 rw-p 00002000 00:37 687138                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/trans/transdb.so
+7fedf3186000-7fedf3188000 r-xp 00000000 00:37 687096                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/encdb.so
+7fedf3188000-7fedf3197000 ---p 00002000 00:37 687096                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/encdb.so
+7fedf3197000-7fedf3198000 r--p 00001000 00:37 687096                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/encdb.so
+7fedf3198000-7fedf3199000 rw-p 00002000 00:37 687096                     /usr/lib/arm-linux-gnueabihf/ruby/2.5.0/enc/encdb.so
+7fedf3199000-7fedf319a000 ---p 00000000 00:00 0 
+7fedf319a000-7fedf33a0000 rw-p 00000000 00:00 0 
+7fedf33a0000-7fedf3484000 r-xp 00000000 00:37 33257                      /lib/arm-linux-gnueabihf/libc-2.28.so
+7fedf3484000-7fedf3494000 ---p 000e4000 00:37 33257                      /lib/arm-linux-gnueabihf/libc-2.28.so
+7fedf3494000-7fedf3496000 r--p 000e4000 00:37 33257                      /lib/arm-linux-gnueabihf/libc-2.28.so
+7fedf3496000-7fedf3497000 rw-p 000e6000 00:37 33257                      /lib/arm-linux-gnueabihf/libc-2.28.so
+7fedf3497000-7fedf349a000 rw-p 00000000 00:00 0 
+7fedf349a000-7fedf3504000 r-xp 00000000 00:37 33291                      /lib/arm-linux-gnueabihf/libm-2.28.so
+7fedf3504000-7fedf3513000 ---p 0006a000 00:37 33291                      /lib/arm-linux-gnueabihf/libm-2.28.so
+7fedf3513000-7fedf3514000 r--p 00069000 00:37 33291                      /lib/arm-linux-gnueabihf/libm-2.28.so
+7fedf3514000-7fedf3515000 rw-p 0006a000 00:37 33291                      /lib/arm-linux-gnueabihf/libm-2.28.so
+7fedf3515000-7fedf351c000 r-xp 00000000 00:37 33265                      /lib/arm-linux-gnueabihf/libcrypt-2.28.so
+7fedf351c000-7fedf352b000 ---p 00007000 00:37 33265                      /lib/arm-linux-gnueabihf/libcrypt-2.28.so
+7fedf352b000-7fedf352c000 r--p 00006000 00:37 33265                      /lib/arm-linux-gnueabihf/libcrypt-2.28.so
+7fedf352c000-7fedf352d000 rw-p 00007000 00:37 33265                      /lib/arm-linux-gnueabihf/libcrypt-2.28.so
+7fedf352d000-7fedf3554000 rw-p 00000000 00:00 0 
+7fedf3554000-7fedf3556000 r-xp 00000000 00:37 33267                      /lib/arm-linux-gnueabihf/libdl-2.28.so
+7fedf3556000-7fedf3565000 ---p 00002000 00:37 33267                      /lib/arm-linux-gnueabihf/libdl-2.28.so
+7fedf3565000-7fedf3566000 r--p 00001000 00:37 33267                      /lib/arm-linux-gnueabihf/libdl-2.28.so
+7fedf3566000-7fedf3567000 rw-p 00002000 00:37 33267                      /lib/arm-linux-gnueabihf/libdl-2.28.so
+7fedf3567000-7fedf35b4000 r-xp 00000000 00:37 34025                      /usr/lib/arm-linux-gnueabihf/libgmp.so.10.3.2
+7fedf35b4000-7fedf35c3000 ---p 0004d000 00:37 34025                      /usr/lib/arm-linux-gnueabihf/libgmp.so.10.3.2
+7fedf35c3000-7fedf35c4000 r--p 0004c000 00:37 34025                      /usr/lib/arm-linux-gnueabihf/libgmp.so.10.3.2
+7fedf35c4000-7fedf35c5000 rw-p 0004d000 00:37 34025                      /usr/lib/arm-linux-gnueabihf/libgmp.so.10.3.2
+7fedf35c5000-7fedf35d7000 r-xp 00000000 00:37 33342                      /lib/arm-linux-gnueabihf/libpthread-2.28.so
+7fedf35d7000-7fedf35e6000 ---p 00012000 00:37 33342                      /lib/arm-linux-gnueabihf/libpthread-2.28.so
+7fedf35e6000-7fedf35e7000 r--p 00011000 00:37 33342                      /lib/arm-linux-gnueabihf/libpthread-2.28.so
+7fedf35e7000-7fedf35e8000 rw-p 00012000 00:37 33342                      /lib/arm-linux-gnueabihf/libpthread-2.28.so
+7fedf35e8000-7fedf35ea000 rw-p 00000000 00:00 0 
+7fedf35ea000-7fedf37a1000 r-xp 00000000 00:37 687076                     /usr/lib/arm-linux-gnueabihf/libruby-2.5.so.2.5.5
+7fedf37a1000-7fedf37b0000 ---p 001b7000 00:37 687076                     /usr/lib/arm-linux-gnueabihf/libruby-2.5.so.2.5.5
+7fedf37b0000-7fedf37b4000 r--p 001b6000 00:37 687076                     /usr/lib/arm-linux-gnueabihf/libruby-2.5.so.2.5.5
+7fedf37b4000-7fedf37b5000 rw-p 001ba000 00:37 687076                     /usr/lib/arm-linux-gnueabihf/libruby-2.5.so.2.5.5
+7fedf37b5000-7fedf37bd000 rw-p 00000000 00:00 0 
+7fedf37bd000-7fedf37c2000 ---p 00000000 00:00 0 
+7fedf37c2000-7fedf37da000 r-xp 00000000 00:37 33240                      /lib/arm-linux-gnueabihf/ld-2.28.so
+7fedf37da000-7fedf37ea000 ---p 00000000 00:00 0 
+7fedf37ea000-7fedf37eb000 r--p 00018000 00:37 33240                      /lib/arm-linux-gnueabihf/ld-2.28.so
+7fedf37eb000-7fedf37ec000 rw-p 00019000 00:37 33240                      /lib/arm-linux-gnueabihf/ld-2.28.so
+7fedf37ec000-7fedf37ed000 ---p 00000000 00:00 0 
+7fedf37ed000-7fedf3fed000 rw-p 00000000 00:00 0 
+7fedf3fed000-7fedf3fee000 r-xp 00000000 00:37 687019                     /usr/bin/ruby2.5
+7fedf3fee000-7fedf3ffd000 ---p 00000000 00:00 0 
+7fedf3ffd000-7fedf3ffe000 r--p 00000000 00:37 687019                     /usr/bin/ruby2.5
+7fedf3ffe000-7fedf3fff000 rw-p 00001000 00:37 687019                     /usr/bin/ruby2.5
+7fedf3fff000-7fedf4000000 r--p 00000000 00:00 0 
+7fedf4000000-7fedf4021000 rw-p 00000000 00:00 0 
+7fedf4021000-7fedf8000000 ---p 00000000 00:00 0 
+7fedf973f000-7fedf9740000 ---p 00000000 00:00 0 
+7fedf9740000-7fedf9780000 rw-p 00000000 00:00 0 
+7fedf9780000-7fedf9781000 ---p 00000000 00:00 0 
+7fedf9781000-7fedf97c1000 rw-p 00000000 00:00 0 
+7fedf97c1000-7fedf97c2000 ---p 00000000 00:00 0 
+7fedf97c2000-7fedf9802000 rw-p 00000000 00:00 0 
+7fedf9802000-7fedf9803000 ---p 00000000 00:00 0 
+7fedf9803000-7fedf9843000 rw-p 00000000 00:00 0 
+7fedf9843000-7fedf9844000 ---p 00000000 00:00 0 
+7fedf9844000-7fedf9884000 rw-p 00000000 00:00 0 
+7fedf9884000-7fedf9885000 ---p 00000000 00:00 0 
+7fedf9885000-7fedf98c5000 rw-p 00000000 00:00 0 
+7fedf98c5000-7fedf98c6000 ---p 00000000 00:00 0 
+7fedf98c6000-7fedf9b07000 rw-p 00000000 00:00 0 
+7fedf9b45000-7fedf9b46000 ---p 00000000 00:00 0 
+7fedf9b46000-7fedf9b86000 rw-p 00000000 00:00 0 
+7fedf9b86000-7fedf9b87000 ---p 00000000 00:00 0 
+7fedf9b87000-7fedf9bc7000 rw-p 00000000 00:00 0 
+7fedf9bc7000-7fedf9bc8000 ---p 00000000 00:00 0 
+7fedf9bc8000-7fedf9c08000 rw-p 00000000 00:00 0 
+7fedf9c08000-7fedf9c09000 ---p 00000000 00:00 0 
+7fedf9c09000-7fedf9c49000 rw-p 00000000 00:00 0 
+7fedf9c89000-7fedf9c8a000 ---p 00000000 00:00 0 
+7fedf9c8a000-7fedf9cca000 rw-p 00000000 00:00 0 
+7fedf9cca000-7fedf9ccb000 ---p 00000000 00:00 0 
+7fedf9ccb000-7fedfa4cb000 rw-p 00000000 00:00 0 
+7ffc35c65000-7ffc35c86000 rw-p 00000000 00:00 0                          [stack]
+7ffc35dec000-7ffc35df0000 r--p 00000000 00:00 0                          [vvar]
+7ffc35df0000-7ffc35df2000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
