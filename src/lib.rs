@@ -63,3 +63,33 @@ fn map_contain_addr(map: &MapRange, addr: usize) -> bool {
 pub fn maps_contain_addr(addr: usize, maps: &[MapRange]) -> bool {
     maps.iter().any(|map| map_contain_addr(map, addr))
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::get_process_maps;
+    use crate::Pid;
+
+    #[test]
+    fn test_map_from_invoked_binary_present() -> () {
+        let mut child = std::process::Command::new("cargo")
+            .spawn()
+            .expect("failed to execute cargo");
+
+        let maps = get_process_maps(child.id() as Pid).unwrap();
+
+        child.kill().expect("failed to kill test process");
+
+        let maybe_cat_region = maps.iter().find(|map| {
+            if let Some(filename) = map.filename() {
+                filename.ends_with("cargo")
+            } else {
+                false
+            }
+        });
+
+        assert!(
+            maybe_cat_region.is_some(),
+            "We should have a map from the binary we invoked!"
+        );
+    }
+}
