@@ -2,12 +2,10 @@ use std;
 use std::ffi::{OsStr, OsString};
 use std::io;
 use std::os::windows::ffi::{OsStrExt, OsStringExt};
-use std::os::windows::io::{
-    AsRawHandle, HandleOrInvalid, HandleOrNull, IntoRawHandle, OwnedHandle,
-};
+use std::os::windows::io::{AsRawHandle, HandleOrNull, IntoRawHandle, OwnedHandle};
 use std::path::{Path, PathBuf};
 use std::ptr::null_mut;
-use winapi::shared::minwindef::{DWORD, FALSE};
+use winapi::shared::minwindef::{DWORD, FALSE, HMODULE};
 use winapi::um::dbghelp::{
     SymCleanup, SymFromNameW, SymInitializeW, SymLoadModuleExW, SymUnloadModule64, MAX_SYM_NAME,
     SYMBOL_INFOW,
@@ -15,9 +13,10 @@ use winapi::um::dbghelp::{
 use winapi::um::handleapi::CloseHandle;
 use winapi::um::memoryapi::VirtualQueryEx;
 use winapi::um::processthreadsapi::OpenProcess;
+use winapi::um::psapi::{
+    EnumProcessModulesEx, GetModuleFileNameExW, GetModuleInformation, LIST_MODULES_ALL, MODULEINFO,
+};
 use winapi::um::sysinfoapi::{GetSystemInfo, SYSTEM_INFO};
-use winapi::um::tlhelp32::{CreateToolhelp32Snapshot, TH32CS_SNAPMODULE, TH32CS_SNAPMODULE32};
-use winapi::um::tlhelp32::{Module32FirstW, Module32NextW, MODULEENTRY32W};
 use winapi::um::winnt::{HANDLE, PROCESS_QUERY_INFORMATION, PROCESS_VM_READ};
 use winapi::um::winnt::{MEMORY_BASIC_INFORMATION, MEM_COMMIT, MEM_IMAGE};
 use winapi::um::winnt::{PAGE_EXECUTE, PAGE_EXECUTE_READ, PAGE_EXECUTE_READWRITE};
@@ -112,36 +111,74 @@ impl Module {
     }
 }
 
-/// Uses the Tool Help API to list all modules.
+/// Uses PSAPI to list all modules.
 fn get_process_modules(pid: Pid) -> io::Result<Vec<Module>> {
-    unsafe {
-        let snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, pid);
-        let snapshot = OwnedHandle::try_from(HandleOrInvalid::from_raw_handle(snapshot.cast()))
-            .map_err(|_| io::Error::last_os_error())?;
-        let handle: HANDLE = snapshot.as_raw_handle().cast();
+    // Longest path that Windows supports, in UTF-16 code units
+    const MAX_LONG_PATH: usize = 32768;
 
-        let mut module = MODULEENTRY32W {
-            ..Default::default()
+    let process_handle = open_process(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, pid)?;
+    let process: HANDLE = process_handle.as_raw_handle().cast();
+
+    let mut handles: Vec<HMODULE> = vec![null_mut(); 1024];
+    loop {
+        let size = (handles.len() * std::mem::size_of::<HMODULE>()) as DWORD;
+        let mut needed: DWORD = 0;
+        let success = unsafe {
+            EnumProcessModulesEx(
+                process,
+                handles.as_mut_ptr(),
+                size,
+                &mut needed,
+                LIST_MODULES_ALL,
+            )
         };
-        module.dwSize = std::mem::size_of_val(&module) as u32;
-
-        let mut success = Module32FirstW(handle, &mut module);
         if success == 0 {
             return Err(io::Error::last_os_error());
         }
-
-        let mut vec = Vec::new();
-        while success != 0 {
-            vec.push(Module {
-                base_addr: module.modBaseAddr as usize,
-                base_size: module.modBaseSize as usize,
-                pathname: PathBuf::from(wstr_to_string(&module.szExePath)),
-            });
-
-            success = Module32NextW(handle, &mut module);
+        let count = needed as usize / std::mem::size_of::<HMODULE>();
+        if needed <= size {
+            handles.truncate(count);
+            break;
         }
-        Ok(vec)
+        handles.resize(count, null_mut());
     }
+
+    let mut filename = vec![0_u16; MAX_LONG_PATH];
+    let mut vec = Vec::with_capacity(handles.len());
+    for handle in handles {
+        // A module can be unloaded after it's enumerated, so skip modules that we can't query
+        let mut info = MODULEINFO::default();
+        let success = unsafe {
+            GetModuleInformation(
+                process,
+                handle,
+                &mut info,
+                std::mem::size_of::<MODULEINFO>() as DWORD,
+            )
+        };
+        if success == 0 {
+            continue;
+        }
+
+        let len = unsafe {
+            GetModuleFileNameExW(
+                process,
+                handle,
+                filename.as_mut_ptr(),
+                filename.len() as DWORD,
+            )
+        } as usize;
+        if len == 0 {
+            continue;
+        }
+
+        vec.push(Module {
+            base_addr: info.lpBaseOfDll as usize,
+            base_size: info.SizeOfImage as usize,
+            pathname: PathBuf::from(OsString::from_wide(&filename[..len])),
+        });
+    }
+    Ok(vec)
 }
 
 /// A range of pages in the virtual address space of a process.
@@ -302,11 +339,6 @@ impl<'a> Drop for SymbolModule<'a> {
             SymUnloadModule64(self.parent.process, self.base);
         }
     }
-}
-
-fn wstr_to_string(full: &[u16]) -> OsString {
-    let len = full.iter().position(|&x| x == 0).unwrap_or(full.len());
-    OsString::from_wide(&full[..len])
 }
 
 fn string_to_wstr(val: &str) -> Vec<u16> {
