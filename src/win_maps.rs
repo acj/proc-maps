@@ -322,3 +322,63 @@ fn path_to_wstr(val: &Path) -> Vec<u16> {
         .chain(std::iter::once(0))
         .collect()
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use winapi::um::libloaderapi::{FreeLibrary, LoadLibraryExW};
+
+    #[test]
+    fn test_module_with_long_path() {
+        let system_root = std::env::var_os("SystemRoot").expect("SystemRoot should be set");
+        let source = Path::new(&system_root).join("System32").join("version.dll");
+
+        // Build a directory tree whose path is well over MAX_PATH (260) characters. std::fs
+        // handles long paths on its own by adding the \\?\ prefix.
+        let root = std::env::temp_dir().join(format!("proc-maps-test-{}", std::process::id()));
+        let mut dir = root.clone();
+        while dir.as_os_str().len() < 300 {
+            dir.push("a_long_directory_name_for_testing");
+        }
+        std::fs::create_dir_all(&dir).expect("failed to create long directory");
+
+        // Use a unique filename so the loader doesn't match an already-loaded DLL by name
+        let dll_name = "proc_maps_long_path_test.dll";
+        let dll_path = dir.join(dll_name);
+        std::fs::copy(&source, &dll_path).expect("failed to copy test DLL");
+        // canonicalize returns a \\?\ path, which LoadLibraryExW needs for paths over MAX_PATH
+        let dll_path = std::fs::canonicalize(&dll_path).expect("failed to canonicalize DLL path");
+
+        let module = unsafe { LoadLibraryExW(path_to_wstr(&dll_path).as_ptr(), null_mut(), 0) };
+        let load_error = io::Error::last_os_error();
+
+        let result = if module.is_null() {
+            Err(format!(
+                "failed to load {}: {load_error}",
+                dll_path.display()
+            ))
+        } else {
+            let maps = get_process_maps(std::process::id());
+            unsafe { FreeLibrary(module) };
+            maps.map_err(|e| format!("get_process_maps failed: {e}"))
+        };
+        let _ = std::fs::remove_dir_all(&root);
+        let maps = result.unwrap();
+
+        let filename = maps
+            .iter()
+            .filter_map(|map| map.filename())
+            .find(|filename| filename.file_name() == Some(OsStr::new(dll_name)))
+            .expect("the long-path DLL should appear in the process maps");
+        assert!(
+            filename.as_os_str().len() > 260,
+            "the DLL's path should not be truncated: {}",
+            filename.display()
+        );
+        assert!(
+            filename.ends_with(dir.strip_prefix(&root).unwrap().join(dll_name)),
+            "unexpected path for the DLL: {}",
+            filename.display()
+        );
+    }
+}
